@@ -6,7 +6,7 @@ jobs:
     name: Bugsnag - Report Build
     steps:
     - name: report
-      uses: lhansford/bugsnag-report-build-action@1.0.0
+      uses: lhansford/bugsnag-report-build-action@1.0.1
       with:
         apiKey: 12345
         failCiIfError: true

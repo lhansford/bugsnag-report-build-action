@@ -1,6 +1,8 @@
 const reportBuild = require('bugsnag-build-reporter');
 const core = require('@actions/core');
 
+const package = require('../package.json');
+
 let failCiIfError = false;
 
 try {
