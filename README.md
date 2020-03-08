@@ -38,8 +38,8 @@ If true then CI will fail if this action fails. Default: `false`.
 ## Example usage
 
 ```yml
-uses: lhansford/bugsnag-report-build-action@1.0.3
+uses: lhansford/bugsnag-report-build-action@1.0.4
 with:
-  apiKey: 12345
+  apiKey: ${{ secrets.bugsnag_api_key }}
   failCiIfError: true
 ```
