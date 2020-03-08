@@ -16,7 +16,7 @@ inputs:
     description: 'The source control provider. The default is `github`.'
     default: 'github'
     required: false
-  sourceControlRepository :
+  sourceControlRepository:
     description: 'The source control repository. The default is the repository running the Github Action.'
     required: false
   sourceControlRevision:
