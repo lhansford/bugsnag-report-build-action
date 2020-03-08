@@ -5561,7 +5561,10 @@ try {
     releaseStage,
     sourceControl: { provider, repository, revision },
   })
-    .then(() => core.info('Build reported to Bugsnag successfully.'));
+    .then(() => core.info('Build reported to Bugsnag successfully.'))
+    .catch((error) => {
+      throw error;
+    });
 } catch (error) {
   core.setFailed(error.message);
   if (failCiIfError) {
@@ -5667,7 +5670,7 @@ module.exports = {
 /***/ 731:
 /***/ (function(module) {
 
-module.exports = {"name":"bugsnag-report-build-action","version":"1.0.1","description":"Report a build to Bugsnag using Github Actions","main":"dist/index.js","scripts":{"build":"ncc build src/index.js","test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"git+https://github.com/lhansford/bugsnag-report-build-action.git"},"keywords":["bugsnag","github","action","actions"],"author":"Luke Hansford <mail@lukehansford.me> (http://lukehansford.me/)","license":"MIT","bugs":{"url":"https://github.com/lhansford/bugsnag-report-build-action/issues"},"homepage":"https://github.com/lhansford/bugsnag-report-build-action#readme","dependencies":{"@actions/core":"^1.2.3","bugsnag-build-reporter":"^1.0.2"},"devDependencies":{"@zeit/ncc":"^0.21.1"}};
+module.exports = {"name":"bugsnag-report-build-action","version":"1.0.3","description":"Report a build to Bugsnag using Github Actions","main":"dist/index.js","scripts":{"build":"ncc build src/index.js","test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"git+https://github.com/lhansford/bugsnag-report-build-action.git"},"keywords":["bugsnag","github","action","actions"],"author":"Luke Hansford <mail@lukehansford.me> (http://lukehansford.me/)","license":"MIT","bugs":{"url":"https://github.com/lhansford/bugsnag-report-build-action/issues"},"homepage":"https://github.com/lhansford/bugsnag-report-build-action#readme","dependencies":{"@actions/core":"^1.2.3","bugsnag-build-reporter":"^1.0.2"},"devDependencies":{"@zeit/ncc":"^0.21.1"}};
 
 /***/ }),
 

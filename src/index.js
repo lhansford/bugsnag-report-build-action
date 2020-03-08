@@ -24,7 +24,10 @@ try {
     releaseStage,
     sourceControl: { provider, repository, revision },
   })
-    .then(() => core.info('Build reported to Bugsnag successfully.'));
+    .then(() => core.info('Build reported to Bugsnag successfully.'))
+    .catch((error) => {
+      throw error;
+    });
 } catch (error) {
   core.setFailed(error.message);
   if (failCiIfError) {
