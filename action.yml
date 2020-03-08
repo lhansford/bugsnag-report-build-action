@@ -1,29 +1,29 @@
 name: 'Bugsnag Report Build'
-description: 'TODO:'
-author: 'TODO:'
+description: 'Github Action that will report a new build to Bugsnag'
+author: 'Ibrahim Ali <@lhansford>'
 inputs:
   apiKey:
-    description: 'TODO:'
+    description: 'Your Bugsnag API Key'
     required: true
   appVersion:
-    description: 'TODO:'
+    description: 'A version string for the build to report. If not set it will default to the version in package.json.'
     required: false
   releaseStage:
-    description: 'TODO:'
+    description: 'The release stage of the build. The default is `production`.'
     default: 'production'
     required: false
   sourceControlProvider:
-    description: 'TODO:'
+    description: 'The source control provider. The default is `github`.'
     default: 'github'
     required: false
   sourceControlRepository :
-    description: 'TODO:'
+    description: 'The source control repository. The default is the repository running the Github Action.'
     required: false
   sourceControlRevision:
-    description: 'TODO:'
+    description: 'The source control revision. The default is the SHA for the running Github Action.'
     required: false
   failCiIfError:
-    description: 'TODO:'
+    description: 'If true then CI will fail if this action fails.'
     required: false
     default: false
 branding:

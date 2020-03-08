@@ -26,8 +26,8 @@ try {
 } catch (error) {
   core.setFailed(error.message);
   if (failCiIfError) {
-    core.setFailed(`TODO: ${error.message}`);
+    core.setFailed(`bugsnag-report-build-action failed: ${error.message}`);
   } else {
-    core.warning(`TODO: ${error.message}`);
+    core.warning(`bugsnag-report-build-action failed: ${error.message}`);
   }
 }
