@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  bugsnagReportBuild:
+    runs-on: ubuntu-latest
+    name: Bugsnag - Report Build
+    steps:
+    - name: report
+      uses: actions/bugsnag-report-build-action@v1
+      with:
+        apiKey: 12345
+        failCiIfError: true

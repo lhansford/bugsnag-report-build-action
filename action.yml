@@ -1,0 +1,34 @@
+name: 'Bugsnag Report Build'
+description: 'TODO:'
+author: 'TODO:'
+inputs:
+  apiKey:
+    description: 'TODO:'
+    required: true
+  appVersion:
+    description: 'TODO:'
+    required: false
+  releaseStage:
+    description: 'TODO:'
+    default: 'production'
+    required: false
+  sourceControlProvider:
+    description: 'TODO:'
+    default: 'github'
+    required: false
+  sourceControlRepository :
+    description: 'TODO:'
+    required: false
+  sourceControlRevision:
+    description: 'TODO:'
+    required: false
+  failCiIfError:
+    description: 'TODO:'
+    required: false
+    default: false
+branding:
+  color: 'blue'
+  icon: 'upload'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
