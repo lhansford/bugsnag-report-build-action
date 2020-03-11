@@ -13,7 +13,7 @@ under the hood, so for more details on available options see its readme.
 
 ### `appVersion`
 
-A version string for the build to report. Default: The version in package.json.
+A version string for the build to report. Default: The version in ./package.json for the PR.
 
 ### `releaseStage`
 
@@ -38,7 +38,7 @@ If true then CI will fail if this action fails. Default: `false`.
 ## Example usage
 
 ```yml
-uses: lhansford/bugsnag-report-build-action@1.0.4
+uses: lhansford/bugsnag-report-build-action@1.0.5
 with:
   apiKey: ${{ secrets.bugsnag_api_key }}
   failCiIfError: true

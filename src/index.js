@@ -1,9 +1,14 @@
 const reportBuild = require('bugsnag-build-reporter');
 const core = require('@actions/core');
-
-const package = require('../package.json');
+const fs = require('fs');
+const path = require('path')
 
 let failCiIfError = false;
+
+function getPackageVersion() {
+  const packageJson = fs.readFileSync(path.join('./', 'package.json')).toString();
+  return JSON.parse(packageJson).version;
+};
 
 try {
   const apiKey = core.getInput('apiKey');
@@ -11,7 +16,7 @@ try {
     throw new Error('apiKey is required');
   }
 
-  const appVersion = core.getInput('appVersion') || package.version;
+  const appVersion = core.getInput('appVersion') || getPackageVersion();
   const releaseStage = core.getInput('releaseStage');
   const provider = core.getInput('sourceControlProvider');
   const repository = core.getInput('sourceControlRepository') || process.env.GITHUB_REPOSITORY;
