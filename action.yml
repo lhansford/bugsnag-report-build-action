@@ -1,6 +1,6 @@
 name: 'Bugsnag Report Build'
 description: 'Github Action that will report a new build to Bugsnag'
-author: 'Ibrahim Ali <@lhansford>'
+author: 'Luke Hansford <@lhansford>'
 inputs:
   apiKey:
     description: 'Your Bugsnag API Key'
