@@ -23,6 +23,7 @@ try {
   const revision = core.getInput('sourceControlRevision') || process.env.GITHUB_SHA;
   failCiIfError = core.getInput('failCiIfError');
 
+  console.log(`Reporting build for version ${appVersion}`);
   reportBuild({
     apiKey,
     appVersion,
