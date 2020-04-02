@@ -5537,10 +5537,15 @@ function simpleEnd(buf) {
 
 const reportBuild = __webpack_require__(198);
 const core = __webpack_require__(470);
-
-const package = __webpack_require__(731);
+const fs = __webpack_require__(747);
+const path = __webpack_require__(622)
 
 let failCiIfError = false;
+
+function getPackageVersion() {
+  const packageJson = fs.readFileSync(path.join('./', 'package.json')).toString();
+  return JSON.parse(packageJson).version;
+};
 
 try {
   const apiKey = core.getInput('apiKey');
@@ -5548,13 +5553,14 @@ try {
     throw new Error('apiKey is required');
   }
 
-  const appVersion = core.getInput('appVersion') || package.version;
+  const appVersion = core.getInput('appVersion') || getPackageVersion();
   const releaseStage = core.getInput('releaseStage');
   const provider = core.getInput('sourceControlProvider');
   const repository = core.getInput('sourceControlRepository') || process.env.GITHUB_REPOSITORY;
   const revision = core.getInput('sourceControlRevision') || process.env.GITHUB_SHA;
   failCiIfError = core.getInput('failCiIfError');
 
+  console.log(`Reporting build for version ${appVersion}`);
   reportBuild({
     apiKey,
     appVersion,
@@ -5664,13 +5670,6 @@ module.exports = {
   }
 }
 
-
-/***/ }),
-
-/***/ 731:
-/***/ (function(module) {
-
-module.exports = {"name":"bugsnag-report-build-action","version":"1.0.4","description":"Report a build to Bugsnag using Github Actions","main":"dist/index.js","scripts":{"build":"ncc build src/index.js","test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"git+https://github.com/lhansford/bugsnag-report-build-action.git"},"keywords":["bugsnag","github","action","actions"],"author":"Luke Hansford <mail@lukehansford.me> (http://lukehansford.me/)","license":"MIT","bugs":{"url":"https://github.com/lhansford/bugsnag-report-build-action/issues"},"homepage":"https://github.com/lhansford/bugsnag-report-build-action#readme","dependencies":{"@actions/core":"^1.2.3","bugsnag-build-reporter":"^1.0.2"},"devDependencies":{"@zeit/ncc":"^0.21.1"}};
 
 /***/ }),
 
