@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Bugsnag - Report Build
     steps:
+    - uses: actions/checkout@v2
+
     - name: report
       uses: lhansford/bugsnag-report-build-action@v1.0.8
       with:
