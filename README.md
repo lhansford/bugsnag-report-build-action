@@ -13,7 +13,7 @@ under the hood, so for more details on available options see its readme.
 
 ### `appVersion`
 
-A version string for the build to report. Default: The version in ./package.json for the PR.
+A version string for the build to report. Default: The version in ./package.json for the PR. This will only work if actions/checkout@v2 is used first.
 
 ### `releaseStage`
 
@@ -41,5 +41,18 @@ If true then CI will fail if this action fails. Default: `false`.
 uses: lhansford/bugsnag-report-build-action@v1.0.9
 with:
   apiKey: ${{ secrets.bugsnag_api_key }}
+  appVersion: 1.0.0
+  failCiIfError: true
+```
+
+## Example usage if appVersion is not specified
+
+```yml
+uses: actions/checkout@v2
+
+uses: lhansford/bugsnag-report-build-action@v1.0.9
+with:
+  apiKey: ${{ secrets.bugsnag_api_key }}
+  appVersion: 1.0.0
   failCiIfError: true
 ```
