@@ -1,6 +1,6 @@
 {
   "name": "bugsnag-report-build-action",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Report a build to Bugsnag using Github Actions",
   "main": "dist/index.js",
   "scripts": {
@@ -23,6 +23,6 @@
     "bugsnag-build-reporter": "^1.0.2"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.21.1"
+    "@zeit/ncc": "^0.22.0"
   }
 }
