@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/lhansford/bugsnag-report-build-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.3",
+    "@actions/core": "^1.2.6",
     "bugsnag-build-reporter": "^1.0.2"
   },
   "devDependencies": {
