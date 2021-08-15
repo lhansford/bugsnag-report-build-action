@@ -8,6 +8,13 @@ inputs:
   appVersion:
     description: 'A version string for the build to report. If not set it will default to the version in package.json. This will only work if actions/checkout@v2 is used first.'
     required: false
+  builderName:
+    description: 'The name of the person/machine that trigerred this build.'
+    required: false
+  failCiIfError:
+    description: 'If true then CI will fail if this action fails.'
+    required: false
+    default: false
   releaseStage:
     description: 'The release stage of the build. The default is `production`.'
     default: 'production'
@@ -22,10 +29,6 @@ inputs:
   sourceControlRevision:
     description: 'The source control revision. The default is the SHA for the running Github Action.'
     required: false
-  failCiIfError:
-    description: 'If true then CI will fail if this action fails.'
-    required: false
-    default: false
 branding:
   color: 'blue'
   icon: 'upload'

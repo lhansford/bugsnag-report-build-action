@@ -15,6 +15,14 @@ under the hood, so for more details on available options see its readme.
 
 A version string for the build to report. Default: The version in ./package.json for the PR. This will only work if actions/checkout@v2 is used first.
 
+### `builderName`
+
+The name of the person/machine that trigerred this build. Default: The value of `whoami`.
+
+### `failCiIfError`
+
+If true then CI will fail if this action fails. Default: `false`.
+
 ### `releaseStage`
 
 The release stage of the build. Default: `production`.
@@ -31,14 +39,10 @@ The source control repository. Default: The repository running the Github Action
 
 The source control revision. Default: The SHA for the running Github Action.
 
-### `failCiIfError`
-
-If true then CI will fail if this action fails. Default: `false`.
-
 ## Example usage
 
 ```yml
-uses: lhansford/bugsnag-report-build-action@v1.0.9
+uses: lhansford/bugsnag-report-build-action@v1.1.0
 with:
   apiKey: ${{ secrets.bugsnag_api_key }}
   appVersion: 1.0.0
@@ -50,7 +54,7 @@ with:
 ```yml
 uses: actions/checkout@v2
 
-uses: lhansford/bugsnag-report-build-action@v1.0.9
+uses: lhansford/bugsnag-report-build-action@v1.1.0
 with:
   apiKey: ${{ secrets.bugsnag_api_key }}
   appVersion: 1.0.0

@@ -1,10 +1,11 @@
 {
   "name": "bugsnag-report-build-action",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Report a build to Bugsnag using Github Actions",
   "main": "dist/index.js",
   "scripts": {
     "build": "ncc build src/index.js",
+    "ping-bugsnag": "node src/pingBugsnag.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +29,7 @@
     "bugsnag-build-reporter": "^2.0.0"
   },
   "devDependencies": {
+    "@bugsnag/js": "^7.11.0",
     "@vercel/ncc": "^0.29.1"
   }
 }

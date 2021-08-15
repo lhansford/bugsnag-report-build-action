@@ -18,15 +18,18 @@ try {
 
   const appVersion = core.getInput('appVersion') || getPackageVersion();
   const releaseStage = core.getInput('releaseStage');
+  const builderName = core.getInput('builderName');
   const provider = core.getInput('sourceControlProvider');
   const repository = core.getInput('sourceControlRepository') || process.env.GITHUB_REPOSITORY;
   const revision = core.getInput('sourceControlRevision') || process.env.GITHUB_SHA;
   failCiIfError = core.getInput('failCiIfError');
 
   console.log(`Reporting build for version ${appVersion}`);
+
   reportBuild({
     apiKey,
     appVersion,
+    builderName,
     releaseStage,
     sourceControl: { provider, repository, revision },
   })
