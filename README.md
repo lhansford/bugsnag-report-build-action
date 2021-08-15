@@ -49,6 +49,20 @@ with:
   failCiIfError: true
 ```
 
+### Example usage if appVersion is not defined
+
+If `appVersion` is not defined the action will try to get it from the `package.json` of the project,
+so you will need to include `actions/checkout@v2` first.
+
+```yml
+uses: actions/checkout@v2
+
+uses: lhansford/bugsnag-report-build-action@v1.1.0
+with:
+  apiKey: ${{ secrets.bugsnag_api_key }}
+  failCiIfError: true
+```
+
 ## Developing
 
 To deploy new changes:
