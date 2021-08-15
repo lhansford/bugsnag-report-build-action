@@ -49,14 +49,11 @@ with:
   failCiIfError: true
 ```
 
-## Example usage if appVersion is not specified
+## Developing
 
-```yml
-uses: actions/checkout@v2
+To deploy new changes:
 
-uses: lhansford/bugsnag-report-build-action@v1.1.0
-with:
-  apiKey: ${{ secrets.bugsnag_api_key }}
-  appVersion: 1.0.0
-  failCiIfError: true
-```
+- Make changes and update all references to the package version.
+- Push changes to `main` branch.
+- Check CI passed.
+- Create a new release on Github matching the new version.
