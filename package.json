@@ -11,7 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/lhansford/bugsnag-report-build-action.git"
   },
-  "keywords": ["bugsnag", "github", "action", "actions"],
+  "keywords": [
+    "bugsnag",
+    "github",
+    "action",
+    "actions"
+  ],
   "author": "Luke Hansford <mail@lukehansford.me> (http://lukehansford.me/)",
   "license": "MIT",
   "bugs": {
@@ -19,10 +24,10 @@
   },
   "homepage": "https://github.com/lhansford/bugsnag-report-build-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.3",
-    "bugsnag-build-reporter": "^1.0.2"
+    "@actions/core": "^1.4.0",
+    "bugsnag-build-reporter": "^2.0.0"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.22.0"
+    "@vercel/ncc": "^0.29.1"
   }
 }
