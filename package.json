@@ -30,6 +30,6 @@
   },
   "devDependencies": {
     "@bugsnag/js": "^7.11.0",
-    "@vercel/ncc": "^0.29.1"
+    "@vercel/ncc": "^0.34.0"
   }
 }
