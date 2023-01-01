@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Bugsnag - Report Build
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: report
       uses: lhansford/bugsnag-report-build-action@main
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Bugsnag - Ping
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Install packages
       run: npm install
