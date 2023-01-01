@@ -42,7 +42,7 @@ The source control revision. Default: The SHA for the running Github Action.
 ## Example usage
 
 ```yml
-uses: lhansford/bugsnag-report-build-action@v1.1.0
+uses: lhansford/bugsnag-report-build-action@v1.2.0
 with:
   apiKey: ${{ secrets.bugsnag_api_key }}
   appVersion: 1.0.0
@@ -57,7 +57,7 @@ so you will need to include `actions/checkout@v2` first.
 ```yml
 uses: actions/checkout@v2
 
-uses: lhansford/bugsnag-report-build-action@v1.1.0
+uses: lhansford/bugsnag-report-build-action@v1.2.0
 with:
   apiKey: ${{ secrets.bugsnag_api_key }}
   failCiIfError: true
