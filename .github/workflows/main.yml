@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Bugsnag - Report Build
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: report
       uses: lhansford/bugsnag-report-build-action@main
@@ -17,8 +17,10 @@ jobs:
   pingBugsnag:
     runs-on: ubuntu-latest
     name: Bugsnag - Ping
+    env:
+      BUGSNAG_API_KEY: ${{ secrets.bugsnag_api_key }}
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Install packages
       run: npm install
