@@ -17,6 +17,8 @@ jobs:
   pingBugsnag:
     runs-on: ubuntu-latest
     name: Bugsnag - Ping
+    env:
+      BUGSNAG_API_KEY: ${{ secrets.bugsnag_api_key }}
     steps:
     - uses: actions/checkout@v3
 
