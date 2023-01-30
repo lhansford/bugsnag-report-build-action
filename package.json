@@ -29,7 +29,7 @@
     "bugsnag-build-reporter": "^2.0.0"
   },
   "devDependencies": {
-    "@bugsnag/js": "^7.18.0",
+    "@bugsnag/js": "^7.19.0",
     "@vercel/ncc": "^0.36.0"
   }
 }
