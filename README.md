@@ -13,7 +13,7 @@ under the hood, so for more details on available options see its readme.
 
 ### `appVersion`
 
-A version string for the build to report. Default: The version in ./package.json for the PR. This will only work if actions/checkout@v2 is used first.
+A version string for the build to report. Default: The version in ./package.json for the PR. This will only work if actions/checkout@v4 is used first.
 
 ### `builderName`
 
@@ -42,7 +42,7 @@ The source control revision. Default: The SHA for the running Github Action.
 ## Example usage
 
 ```yml
-uses: lhansford/bugsnag-report-build-action@v1.2.0
+uses: lhansford/bugsnag-report-build-action@v1.3.0
 with:
   apiKey: ${{ secrets.bugsnag_api_key }}
   appVersion: 1.0.0
@@ -52,12 +52,12 @@ with:
 ### Example usage if appVersion is not defined
 
 If `appVersion` is not defined the action will try to get it from the `package.json` of the project,
-so you will need to include `actions/checkout@v2` first.
+so you will need to include `actions/checkout@v4` first.
 
 ```yml
-uses: actions/checkout@v2
+uses: actions/checkout@v4
 
-uses: lhansford/bugsnag-report-build-action@v1.2.0
+uses: lhansford/bugsnag-report-build-action@v1.3.0
 with:
   apiKey: ${{ secrets.bugsnag_api_key }}
   failCiIfError: true
