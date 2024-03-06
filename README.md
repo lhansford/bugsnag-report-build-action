@@ -68,6 +68,7 @@ with:
 To deploy new changes:
 
 - Make changes and update all references to the package version.
+- Run `npm run build`
 - Push changes to `main` branch.
 - Check CI passed.
 - Create a new release on Github matching the new version.
