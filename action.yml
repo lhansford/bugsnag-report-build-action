@@ -6,7 +6,7 @@ inputs:
     description: 'Your Bugsnag API Key'
     required: true
   appVersion:
-    description: 'A version string for the build to report. If not set it will default to the version in package.json. This will only work if actions/checkout@v2 is used first.'
+    description: 'A version string for the build to report. If not set it will default to the version in package.json. This will only work if actions/checkout@v4 is used first.'
     required: false
   builderName:
     description: 'The name of the person/machine that trigerred this build.'
@@ -33,5 +33,5 @@ branding:
   color: 'blue'
   icon: 'upload'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
