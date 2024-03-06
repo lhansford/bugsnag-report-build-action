@@ -6,6 +6,9 @@ jobs:
     name: Bugsnag - Report Build
     steps:
     - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: '.tool-versions'
 
     - name: report
       uses: lhansford/bugsnag-report-build-action@main
@@ -21,6 +24,9 @@ jobs:
       BUGSNAG_API_KEY: ${{ secrets.bugsnag_api_key }}
     steps:
     - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: '.tool-versions'
 
     - name: Install packages
       run: npm install

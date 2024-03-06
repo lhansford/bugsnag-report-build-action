@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "ncc build src/index.js",
-    "ping-bugsnag": "node src/pingBugsnag.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ping-bugsnag": "node src/pingBugsnag.js"
   },
   "repository": {
     "type": "git",
