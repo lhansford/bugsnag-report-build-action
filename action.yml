@@ -8,6 +8,10 @@ inputs:
   appVersion:
     description: 'A version string for the build to report. If not set it will default to the version in package.json. This will only work if actions/checkout@v4 is used first.'
     required: false
+  autoAssignRelease:
+    description: 'Whether Bugsnag should auto-assign this release to future error events'
+    required: false
+    default: 'true'
   builderName:
     description: 'The name of the person/machine that trigerred this build.'
     required: false
